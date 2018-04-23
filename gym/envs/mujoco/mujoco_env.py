@@ -101,7 +101,6 @@ class MujocoEnv(gym.Env):
 
     def render(self, mode='human'):
         if mode == 'rgb_array':
-            self._get_viewer().render()
             return self._get_viewer()._read_pixels_as_in_window()
         elif mode == 'human':
             self._get_viewer().render()
